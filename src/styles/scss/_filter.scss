@@ -1,0 +1,115 @@
+.filter {
+  margin-top: 1.5rem;
+
+  > div {
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .search-container {
+    position: relative;
+    .filter__search-bar {
+      box-shadow: $box-shadow-light;
+      position: relative;
+      width: 100%;
+
+      @include breakpoint(md) {
+        max-width: 375px;
+      }
+
+      input {
+        padding: 0.5rem 1rem 0.5rem 2.5rem;
+        font-size: 1.1rem;
+        background-color: $clr-light-elements;
+        &:focus {
+          border: 1px solid $clr-dark-element;
+          ~ i {
+            color: $clr-dark-element !important;
+          }
+        }
+      }
+
+      i {
+        color: $clr-dark-element;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+      }
+    }
+    .search_results {
+      position: absolute;
+      background-color: $clr-light-elements;
+      width: 100%;
+      margin-top: 5px;
+      z-index: 999;
+      box-shadow: $box-shadow-light;
+      height: auto !important;
+      overflow: scroll;
+      scrollbar-width: none;
+      max-height: 200px !important;
+
+      &-item {
+        background-color: $clr-light-elements;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0rem 1rem;
+        height: 66.6px !important;
+        width: 100% !important;
+
+        &:hover {
+          cursor: pointer;
+          background-color: darken($clr-light-elements, 10%);
+        }
+        .item-flag {
+          width: 45px;
+        }
+      }
+    }
+  }
+
+  .filter__region {
+    width: 100%;
+    margin-top: 1.3rem;
+    position: relative;
+
+    @include breakpoint(md) {
+      margin-top: 0rem;
+      max-width: 200px;
+    }
+
+    button {
+      background-color: $clr-light-elements;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      box-shadow: $box-shadow-light !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .list-regions {
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+      background-color: $clr-light-elements;
+      box-shadow: $box-shadow-light;
+      border-radius: 5px;
+      margin-top: 0.6rem;
+      padding: 0 !important;
+      .list-item {
+        cursor: pointer !important;
+        text-transform: capitalize;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+          background-color: darken($clr-light-elements, 10%);
+        }
+      }
+    }
+  }
+}

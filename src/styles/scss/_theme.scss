@@ -1,0 +1,107 @@
+.dark_theme {
+  background-color: $clr-dark-bg;
+
+  .header {
+    background-color: $clr-dark-element;
+    color: $clr-light-elements;
+    box-shadow: $box-shadow-light;
+    .theme-btn {
+      color: $clr-light-elements;
+    }
+  }
+  .filter {
+    .filter__search-bar {
+      // box-shadow: $box-shadow-dark;
+      input {
+        caret-color: $clr-light-elements;
+        color: $clr-light-elements;
+        background-color: $clr-dark-element;
+        border: 1px solid $clr-dark-bg;
+        &:focus {
+          border: 1px solid $clr-light-elements;
+          ~ i {
+            color: $clr-light-bg !important;
+          }
+        }
+      }
+      i {
+        color: $clr-light-input;
+      }
+    }
+
+    .filter__region {
+      button {
+        background-color: $clr-dark-element;
+        box-shadow: $box-shadow-light !important;
+        color: $clr-light-elements;
+      }
+
+      .list-regions {
+        background-color: $clr-dark-element;
+        color: $clr-light-elements;
+        box-shadow: $box-shadow-light;
+        .list-item {
+          color: $clr-light-elements;
+          &:hover {
+            background-color: darken($clr-dark-element, 10%);
+          }
+        }
+      }
+    }
+  }
+  .countries {
+    .country {
+      background-color: $clr-dark-element;
+      box-shadow: $box-shadow-light;
+      .country__details {
+        .country__details-name {
+          color: $clr-light-elements;
+        }
+
+        p {
+          color: $clr-light-input;
+          span {
+            color: $clr-light-elements;
+          }
+        }
+      }
+    }
+  }
+
+  .country {
+    .container-xl {
+      .btn_container {
+        .btn_back {
+          color: $clr-light-elements;
+          background-color: $clr-dark-element !important;
+        }
+      }
+      #country_details {
+        .details {
+          .details-name {
+            color: $clr-light-elements;
+          }
+          li {
+            color: $clr-light-bg;
+
+            span {
+              color: $clr-light-elements;
+            }
+          }
+
+          .details-borders {
+            .border-item {
+              background-color: $clr-dark-element;
+              color: $clr-light-bg !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .api_placeholder {
+    line-height: 1;
+    color: $clr-light-input !important;
+    font-weight: normal;
+  }
+}

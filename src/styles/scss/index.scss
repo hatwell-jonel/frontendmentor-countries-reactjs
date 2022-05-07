@@ -1,0 +1,59 @@
+@import "./variables";
+@import "./theme";
+@import "./header";
+@import "./filter";
+@import "./country";
+@import "./countries";
+
+* {
+  box-sizing: border-box !important;
+  font-family: $ff-nunito;
+  transition: 0.3s ease-in;
+}
+
+body {
+  background-color: $clr-light-bg;
+  color: $clr-dark-text;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+select {
+  box-shadow: none !important;
+}
+
+.api_placeholder {
+  line-height: 1;
+  color: $clr-light-input;
+  font-weight: normal;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0rem;
+  transition: 0.3s ease !important;
+}

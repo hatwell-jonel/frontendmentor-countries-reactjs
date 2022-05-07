@@ -1,0 +1,53 @@
+.countries {
+  margin-top: 5rem;
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+
+    .country {
+      border-radius: 10px;
+      box-shadow: $box-shadow-light;
+      background-color: $clr-light-elements;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+
+      .country__flag {
+        border-radius: 10px 10px 0px 0px;
+        height: 170px;
+        img {
+          height: 100% !important;
+          width: 100% !important;
+          object-fit: fill;
+          border-radius: 10px 10px 0px 0px;
+        }
+      }
+
+      .country__details {
+        padding: 1.5rem;
+
+        .country__details-name {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: $clr-dark-text;
+          margin-bottom: 0.3rem !important;
+        }
+
+        p {
+          font-size: 1.025rem;
+          color: $clr-light-input;
+          span {
+            color: $clr-dark-text;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

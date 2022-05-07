@@ -1,0 +1,19 @@
+.header {
+  background-color: $clr-light-elements;
+  color: $clr-dark-text;
+  box-shadow: $box-shadow-dark;
+  padding: 0.8rem 0rem;
+
+  .logo {
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-btn {
+    display: flex;
+    font-size: clamp(0.75rem, 3vw, 1rem);
+    color: $clr-dark-text;
+  }
+}

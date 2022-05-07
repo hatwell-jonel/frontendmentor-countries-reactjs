@@ -1,0 +1,100 @@
+.country {
+  .btn_container {
+    margin: 2rem 0rem;
+    .btn_back {
+      background-color: $clr-light-elements !important;
+      box-shadow: $box-shadow-light !important;
+      color: $clr-dark-text;
+      border: 0;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border-radius: 4px;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  #country_details {
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .img-container {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+    .details-container {
+      .details {
+        &-name {
+          h2 {
+            font-weight: 600 !important;
+            font-size: 1.6rem !important;
+          }
+          margin: 1rem 0rem;
+        }
+
+        &-items {
+          text-transform: capitalize;
+          font-weight: bold;
+
+          @include breakpoint(md) {
+            display: flex;
+            gap: 3rem;
+          }
+          ul {
+            li {
+              padding: 0.2rem 0rem;
+              span {
+                margin-left: 0.2rem;
+                font-weight: normal;
+                color: darken($clr-light-input, 10%);
+              }
+            }
+          }
+
+          .details-items-bottom {
+            margin: 1.5rem 0rem;
+
+            @include breakpoint(md) {
+              margin: 0rem;
+            }
+          }
+        }
+
+        &-borders {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2rem;
+
+          span {
+            text-transform: capitalize;
+            font-weight: bold;
+          }
+
+          .border {
+            border: 0 !important;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            .border-item {
+              pointer-events: none;
+              color: $clr-light-input;
+              box-shadow: $box-shadow-light;
+              padding: 0.3rem 1.5rem;
+              background-color: $clr-light-elements;
+            }
+          }
+        }
+      }
+    }
+  }
+}
