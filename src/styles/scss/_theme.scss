@@ -10,22 +10,24 @@
     }
   }
   .filter {
-    .filter__search-bar {
-      // box-shadow: $box-shadow-dark;
-      input {
-        caret-color: $clr-light-elements;
-        color: $clr-light-elements;
-        background-color: $clr-dark-element;
-        border: 1px solid $clr-dark-bg;
-        &:focus {
-          border: 1px solid $clr-light-elements;
-          ~ i {
-            color: $clr-light-bg !important;
+    .search-container {
+      .filter__search-bar {
+        // box-shadow: $box-shadow-dark;
+        input {
+          caret-color: $clr-light-elements;
+          color: $clr-light-elements;
+          background-color: $clr-dark-element !important;
+          border: 1px solid $clr-dark-bg !important;
+          &:focus {
+            border: 1px solid $clr-light-elements;
+            ~ i {
+              color: $clr-light-bg !important;
+            }
           }
         }
-      }
-      i {
-        color: $clr-light-input;
+        i {
+          color: $clr-light-input;
+        }
       }
     }
 

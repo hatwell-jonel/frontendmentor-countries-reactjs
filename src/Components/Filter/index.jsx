@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Filter({ countries }) {
+function Filter({ countries, handleSelect }) {
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState("");
   const [filterCountry, setFilterCountry] = useState([]);
-  const [filterRegion, setFilterRegion] = useState();
 
-  console.log(countries.map((c) => c.region));
-
-  const showFilterChoices = () => {
-    setShowFilter(!showFilter);
-  };
+  // console.log(countries.map((c) => c.region));
 
   const handleFilter = (e) => {
     const value = e.target.value;
@@ -29,6 +24,7 @@ function Filter({ countries }) {
       setFilterCountry(filterValue);
     }
   };
+
   return (
     <>
       <div className="filter">
@@ -67,8 +63,12 @@ function Filter({ countries }) {
             )}
           </div>
 
-          <div className="filter__region">
-            {/* <select className="form-select">
+          <div
+            className="filter__region"
+            defaultValue="All"
+            onChange={handleSelect}
+          >
+            <select className="form-select">
               <option hidden>Filter By Region</option>
               <option value="All">All</option>
               <option value="Africa">Africa</option>
@@ -76,31 +76,8 @@ function Filter({ countries }) {
               <option value="Americas">Americas</option>
               <option value="Europe">Europe</option>
               <option value="Oceania">Oceania</option>
-            </select> */}
-            <button type="button" className="btn" onClick={showFilterChoices}>
-              Filter by Region <i className="fa-solid fa-angle-down"></i>
-            </button>
-            {showFilter ? (
-              <ul className="list-regions">
-                <li className="list-item" onClick={showFilterChoices}>
-                  africa
-                </li>
-                <li className="list-item" onClick={showFilterChoices}>
-                  america
-                </li>
-                <li className="list-item" onClick={showFilterChoices}>
-                  asia
-                </li>
-                <li className="list-item" onClick={showFilterChoices}>
-                  europe
-                </li>
-                <li className="list-item" onClick={showFilterChoices}>
-                  oceania
-                </li>
-              </ul>
-            ) : (
-              ""
-            )}
+              <option value="Polar">Polar</option>
+            </select>
           </div>
         </div>
       </div>

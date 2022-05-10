@@ -10,19 +10,19 @@
 .dark_theme .header .theme-btn {
   color: white;
 }
-.dark_theme .filter .filter__search-bar input {
+.dark_theme .filter .search-container .filter__search-bar input {
   caret-color: white;
   color: white;
-  background-color: #2b3945;
-  border: 1px solid #202c37;
+  background-color: #2b3945 !important;
+  border: 1px solid #202c37 !important;
 }
-.dark_theme .filter .filter__search-bar input:focus {
+.dark_theme .filter .search-container .filter__search-bar input:focus {
   border: 1px solid white;
 }
-.dark_theme .filter .filter__search-bar input:focus ~ i {
+.dark_theme .filter .search-container .filter__search-bar input:focus ~ i {
   color: #fafafa !important;
 }
-.dark_theme .filter .filter__search-bar i {
+.dark_theme .filter .search-container .filter__search-bar i {
   color: #858585;
 }
 .dark_theme .filter .filter__region button {

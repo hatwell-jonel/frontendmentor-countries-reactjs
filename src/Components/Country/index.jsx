@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { formatNumber } from "../function";
+import Header from "../Header";
 
 function Country() {
   const [countries, setCountries] = useState([]);
   const { name } = useParams();
-
-  const formatNumber = (num) => {
-    let digits = Number(num);
-    let value = digits.toLocaleString("en");
-    return value;
-  };
 
   useEffect(() => {
     const getCountry = async () => {
@@ -23,6 +19,7 @@ function Country() {
 
   return (
     <>
+      <Header />
       <div className="country">
         <div className="container-xl">
           <div className="btn_container">
