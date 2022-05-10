@@ -42,7 +42,7 @@ function Filter({ countries, handleSelect }) {
             {filterCountry.length != 0 && (
               <div className="search_results">
                 {filterCountry.map((country) => {
-                  const { id, name, flags } = country;
+                  const { name, flags } = country;
                   return (
                     <Link to={`/${name}`} key={name}>
                       <span className="search_results-item">

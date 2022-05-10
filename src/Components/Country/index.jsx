@@ -110,13 +110,6 @@ function Country() {
                               ) : (
                                 "no currencies"
                               )}
-
-                              {/* {currencies[0].symbol
-                                ? currencies[0].symbol
-                                : "unknown"}{" "}
-                              {currencies[0].name
-                                ? currencies[0].name
-                                : "unknown"} */}
                             </span>
                           </li>
                           <li className="details-languages">

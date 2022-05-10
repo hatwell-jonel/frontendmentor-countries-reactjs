@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Countries from "./Components/Countries";
 import Country from "./Components/Country";
-import Header from "./Components/Header";
 import ErrorPage from "./Components/ErrorPage";
 import Homepage from "./Components/Homepage";
 
@@ -19,4 +17,5 @@ function App() {
 
 export default App;
 
+// API
 // https://restcountries.com/#api-endpoints-v2
