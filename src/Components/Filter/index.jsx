@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Filter({ countries, handleSelect }) {
-  const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState("");
   const [filterCountry, setFilterCountry] = useState([]);
-
-  // console.log(countries.map((c) => c.region));
 
   const handleFilter = (e) => {
     const value = e.target.value;
@@ -86,5 +83,3 @@ function Filter({ countries, handleSelect }) {
 }
 
 export default Filter;
-
-// https://www.frontendmentor.io/solutions/countries-list-B1k9mm775

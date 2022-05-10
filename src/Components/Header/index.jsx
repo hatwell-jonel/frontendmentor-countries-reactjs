@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 function Header() {
   const [isDarkmode, setIsDarkmode] = useState(false);
 
   const themeSelector = (e) => {
     setIsDarkmode(!isDarkmode);
+    document.body.classList.toggle("dark_theme");
   };
 
   return (

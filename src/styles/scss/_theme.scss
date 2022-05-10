@@ -32,22 +32,11 @@
     }
 
     .filter__region {
-      button {
-        background-color: $clr-dark-element;
-        box-shadow: $box-shadow-light !important;
-        color: $clr-light-elements;
-      }
-
-      .list-regions {
+      .form-select {
         background-color: $clr-dark-element;
         color: $clr-light-elements;
-        box-shadow: $box-shadow-light;
-        .list-item {
-          color: $clr-light-elements;
-          &:hover {
-            background-color: darken($clr-dark-element, 10%);
-          }
-        }
+        border: 1px solid $clr-dark-element;
+        box-shadow: $box-shadow-dark;
       }
     }
   }
