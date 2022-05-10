@@ -1,44 +1,10 @@
 import React, { useState } from "react";
 function Header() {
   const [isDarkmode, setIsDarkmode] = useState(false);
-  let theme;
-  // let storedTheme = localStorage.getItem("theme");
-
-  if (localStorage) {
-    theme = localStorage.getItem("theme");
-  }
-
-  if (theme === "dark_theme" || theme === "") {
-    document.body.classList.add(theme);
-  } else {
-    document.body.classList.add("");
-  }
-
-  // if (isDarkmode == true) {
-  //   theme = "dark_theme";
-  // } else {
-  //   theme = "";
-  // }
-  // localStorage.setItem("theme", theme);
-
-  console.log(theme);
 
   const themeSelector = (e) => {
-    // document.body.classList.toggle("dark_theme");
     setIsDarkmode(!isDarkmode);
   };
-
-  // if (isDarkmode == true) {
-  // document.body.classList.add(theme);
-  // } else {
-  //   document.body.classList.remove(theme);
-  // }
-
-  // if(localStorage){
-  //   localStorage.setItem("dark_theme", "");
-  // }
-
-  // console.log("theme is " + theme);
 
   return (
     <>
