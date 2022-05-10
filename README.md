@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here]()
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/reactjs-theme-switcher-bootstrap-scss-B1SrBeuUc)
 - Live Site URL: [Click here](https://frontendmentor-countries-reactjs.vercel.app/)
 
 ### Built with
